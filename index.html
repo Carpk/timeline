@@ -3,17 +3,21 @@
 <head>
   <title>Timeline | Basic demo</title>
 
+  <script src="vis/dist/vis.js"></script>
+  <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
+
   <style type="text/css">
     body, html {
       font-family: sans-serif;
+      background-color: #272727;
     }
+    .vis-timeline {
+      border: none;
+    }	
   </style>
-
-  <script src="vis/dist/vis.js"></script>
-  <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="visualization"></div>
+<div id="visualization" style="margin-top: 17%"></div>
 
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
@@ -21,12 +25,20 @@
 
   // Create a DataSet (allows two way data-binding)
   var items = new vis.DataSet([
-    {id: 1, content: 'item 1', start: '2013-04-20'},
-    {id: 2, content: 'item 2', start: '2013-04-14'},
-    {id: 3, content: 'item 3', start: '2013-04-18'},
-    {id: 4, content: 'item 4', start: '2013-04-16', end: '2013-04-19'},
-    {id: 5, content: 'item 5', start: '2013-04-25'},
-    {id: 6, content: 'item 6', start: '2013-04-27'}
+    {id: 1, content: 'WWI', start: '1914-07-28', end: '1918-11-11'},
+    {id: 2, content: 'WWII', start: '1939-09-01', end: '1945-09-02'},
+    {id: 3, content: 'Renaissance', start: '1300-01-01', end: '1700-06-01'},
+    {id: 4, content: 'Middle/Dark Ages', start: '0476-06-01', end: '1400-06-01'},
+    {id: 5, content: 'Plato', start: '-000380-04-25'},
+    {id: 6, content: 'Hitler invades Poland', start: '1939-09-01'},
+	{id: 7, content: 'Rome Fell', start: '0476-09-01'},
+	{id: 8, content: 'U.S. declares independence', start: '1776-07-04'},
+	{id: 9, content: 'a. Greece', start: '-001139-09-01', end: '-000800-06-01'},
+	{id: 10, content: 'H. Greece', start: '-000500-09-01', end: '-000323-06-15'},
+	{id: 11, content: 'Rome founded', start: '-000753-09-01'},
+	{id: 12, content: 'ancient Rome', start: '-000510-06-01', end: '0476-06-15'},
+	{id: 13, content: 'Mesopotamia', start: '-007000-06-01', end: '-000332-06-15'},
+	{id: 14, content: 'Cuneiform', start: '-003200-09-01'},
   ]);
 
   // Configuration for the Timeline
