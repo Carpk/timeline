@@ -11,6 +11,9 @@
       font-family: sans-serif;
       background-color: #FDFDFD;
     }
+	#visualization {
+		margin-top: 14%;
+	}
     .vis-timeline {
       // border: none;
     }
@@ -45,10 +48,18 @@
       background-color: rgba(255,237,194, 0.6);
 
     }
+	.vis-item.vis-background.usa {
+      background-color: rgba(0,0,255, 0.6);
+
+    }
+	.vis-item.vis-background.col {
+      background-color: rgba(255,0,0, 0.6);
+
+    }
   </style>
 </head>
 <body>
-<div id="visualization" style="margin-top: 17%"></div>
+<div id="visualization"></div>
 
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
@@ -56,9 +67,10 @@
 
 
   var groups = new vis.DataSet([
-    { id: 1, content: 'Egypt', value: 1},
-    { id: 2, content: 'Europe', value: 2},
-    { id: 3, content: 'Middle East', value: 3}
+    { id: 1, content: 'Egypt', value: 2},
+    { id: 2, content: 'Europe', value: 3},
+    { id: 3, content: 'Middle East', value: 4},
+    { id: 4, content: 'America', value: 1}
   ]);
 
   // Create a DataSet (allows two way data-binding)
@@ -69,6 +81,8 @@
     {id: 'RE', group: 2, content: 'Renaissance', start: '1300-01-01', end: '1700-06-01', type: 'background', className: 'renaissance'},
     {id: 'AE', group: 1, content: 'ancient Egypt', start: '-003000-01-01', end: '-000332-06-01', type: 'background', className: 'aegypt'},
     {id: 'ME', group: 3, content: 'Mesopotamia', start: '-005700-06-01', end: '-000332-06-15', type: 'background', className: 'meso'},
+    {id: 'US', group: 4, content: 'America', start: '1776-07-04', end: '2017-06-15', type: 'background', className: 'usa'},
+	{id: 'CO', group: 4, content: 'Colonies', start: '1607-07-04', end: '1776-07-04', type: 'background', className: 'col'},
     {id: 1, group: 2, content: 'WWI', start: '1914-07-28'},
     {id: 2, group: 2, content: 'WWII', start: '1939-09-01'},
     {id: 3, group: 2, content: 'Mona Lisa', start: '1505-06-01'},
@@ -76,13 +90,20 @@
     {id: 5, group: 2, content: 'Plato', start: '-000380-04-25'},
     {id: 6, group: 2, content: 'The Night Watch', start: '1642-06-01'},
 	{id: 7, group: 2, content: 'Rome Fell', start: '0476-09-01', group: 2},
-	{id: 8, content: 'U.S. independence', start: '1776-07-04'},
+	{id: 8, group: 4, content: 'U.S. independence', start: '1776-07-04'},
 	{id: 9, group: 2, content: 'Pantheon', start: '0123-09-01'},
 	{id: 10, group: 2, content: 'Parthenon', start: '-000439-06-01'},
 	{id: 11, group: 2, content: 'Rome founded', start: '-000753-09-01'},
 	{id: 12, group: 2, content: 'Crusades', start: '1200-06-01'},
-	{id: 13, content: '', start: '-005700-06-01'},
+	{id: 13, group: 3,content: 'Aleppo', start: '-005000-06-01'},
 	{id: 14, group: 3, content: 'Cuneiform', start: '-003200-09-01'},
+	{id: 15, group: 4, content: 'Settlers arrive', start: '1607-09-01'},
+	{id: 16, group: 4, content: 'Columbus', start: '1492-09-01'},
+	{id: 17, group: 2, content: 'Napoleon', start: '1809-05-18'},
+	//{id: 18, group: 1, content: 'Nefertitt', start: '-001311-05-18'},
+	{id: 19, group: 1, content: 'Cleopatra', start: '-000051-05-18'},
+	{id: 20, group: 1, content: 'King Tut', start: '-001328-05-18'},
+	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'}
   ]);
 
 
@@ -162,7 +183,12 @@
 
 
   // Configuration for the Timeline
-  var options = {};
+  var options = {
+    groupOrder: function (a, b) {
+      return a.value - b.value;
+    },
+    editable: true
+	};
 
   // Create a Timeline
   var timeline = new vis.Timeline(container);
