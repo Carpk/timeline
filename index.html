@@ -27,44 +27,34 @@
 	div.vis-item-content {
 		color: black;
 	}
-	.vis-item.vis-background.dark {
-	  background-color: rgba(47,79,79, 0.6);
+	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.5);
 	}
-	.vis-item.vis-background.greece {
-	  background-color: rgba(255,182,193, 0.6);
+	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.5);
 	}
-	.vis-item.vis-background.rome {
-      background-color: rgba(128,0,0, 0.6);
+	.vis-item.vis-background.hgreec { background-color: rgba(255,159,174, 0.5);
+	}
+	.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.5);
     }
-	.vis-item.vis-background.renaissance {
-      background-color: rgba(34,139,34, 0.6);
-
+	.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.5);
     }
-	.vis-item.vis-background.aegypt {
-      background-color: rgba(255, 242, 226, 0.6);
-
+	.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.5);
     }
-	.vis-item.vis-background.meso {
-      background-color: rgba(255,237,194, 0.6);
-
+	.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.5);
     }
-	.vis-item.vis-background.usa {
-      background-color: rgba(0,0,255, 0.6);
-
-    }
-	.vis-item.vis-background.col {
-      background-color: rgba(255,0,0, 0.6);
-
-    }
+	.vis-item.vis-background.meso  { background-color: rgba(255,237,194, 0.5); 
+	}
+	.vis-item.vis-background.usa   { background-color: rgba(0,0,255, 0.5); 
+	}
+	.vis-item.vis-background.col   { background-color: rgba(255,0,0, 0.5); 
+	}
   </style>
 </head>
 <body>
 <div id="visualization"></div>
 
 <script type="text/javascript">
-  // DOM element where the Timeline will be attached
-  var container = document.getElementById('visualization');
 
+  var container = document.getElementById('visualization');
 
   var groups = new vis.DataSet([
     { id: 1, content: 'Egypt', value: 2},
@@ -73,16 +63,18 @@
     { id: 4, content: 'America', value: 1}
   ]);
 
-  // Create a DataSet (allows two way data-binding)
   var items = new vis.DataSet([
-    {id: 'AG', group: 2, content: 'ancient Greece', start: '-001139-09-01', end: '-000800-06-22', type: 'background', className: 'greece'},
-    {id: 'AR', group: 2, content: 'ancient Rome', start: '-000510-06-01', end: '0476-06-15', type: 'background', className: 'rome'},
+    {id: 'AG', group: 2, content: 'ancient Greece', start: '-000800-09-01', end: '-000323-09-01', type: 'background', className: 'greece'},
+    {id: 'HG', group: 2, content: '',               start: '-000323-09-01', end: '0146-06-22', type: 'background', className: 'greece'},
+    {id: 'AR', group: 2, content: 'ancient Rome',   start: '-000510-06-01', end: '0476-06-15', type: 'background', className: 'rome'},
+	{id: 'PA', group: 1, content: '',               start: '-000030-06-01', end: '0641-07-04', type: 'background', className: 'rome'},
     {id: 'DA', group: 2, content: 'Middle/Dark Ages', start: '0476-06-01', end: '1400-06-01', type: 'background', className: 'dark'},
-    {id: 'RE', group: 2, content: 'Renaissance', start: '1300-01-01', end: '1700-06-01', type: 'background', className: 'renaissance'},
-    {id: 'AE', group: 1, content: 'ancient Egypt', start: '-003000-01-01', end: '-000332-06-01', type: 'background', className: 'aegypt'},
-    {id: 'ME', group: 3, content: 'Mesopotamia', start: '-005700-06-01', end: '-000332-06-15', type: 'background', className: 'meso'},
-    {id: 'US', group: 4, content: 'America', start: '1776-07-04', end: '2017-06-15', type: 'background', className: 'usa'},
-	{id: 'CO', group: 4, content: 'Colonies', start: '1607-07-04', end: '1776-07-04', type: 'background', className: 'col'},
+    {id: 'RE', group: 2, content: 'Renaissance',    start: '1300-01-01', end: '1700-06-01', type: 'background', className: 'renais'},
+    {id: 'AE', group: 1, content: 'ancient Egypt',  start: '-003100-01-01', end: '-000332-06-01', type: 'background', className: 'aegypt'},
+	{id: 'HE', group: 1, content: '',               start: '-000332-06-01', end: '-000030-06-01', type: 'background', className: 'hegypt'},
+    {id: 'ME', group: 3, content: 'Mesopotamia',    start: '-005700-06-01', end: '-000332-06-15', type: 'background', className: 'meso'},
+    {id: 'US', group: 4, content: 'America',        start: '1776-07-04', end: '2017-06-15', type: 'background', className: 'usa'},
+	{id: 'CO', group: 4, content: 'Colonies',       start: '1607-07-04', end: '1776-07-04', type: 'background', className: 'col'},
     {id: 1, group: 2, content: 'WWI', start: '1914-07-28'},
     {id: 2, group: 2, content: 'WWII', start: '1939-09-01'},
     {id: 3, group: 2, content: 'Mona Lisa', start: '1505-06-01'},
@@ -108,7 +100,6 @@
 
 
 /**
-
   var items = new vis.DataSet([
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
     {id: 'B', content: 'Period B', start: '2014-01-25', end: '2014-01-30', type: 'background', className: 'negative'},
@@ -116,81 +107,39 @@
     {id: 2, content: 'item 2', start: '2014-01-18'},
     {id: 3, content: 'item 3', start: '2014-01-21'},
     {id: 4, content: 'item 4', start: '2014-01-19', end: '2014-01-24'},
-    {id: 5, content: 'item 5', start: '2014-01-28', type:'point'},
-    {id: 6, content: 'item 6', start: '2014-01-26'}
+    {id: 5, content: 'item 5', start: '2014-01-28', type:'point'}
   ]);
 
   var container = document.getElementById('visualization');
   var options = {
-    start: '2014-01-10',
-    end: '2014-02-10',
+    start: '-010000-01-10',
+    end: '2017-02-10',
     editable: true
   };
 
   var timeline = new vis.Timeline(container, items, options);
-
-
-
-~~~~~~~~~~~~~~~~
-
-  var groups = new vis.DataSet([
-    {id: 0, content: 'First', value: 1},
-    {id: 1, content: 'Third', value: 3},
-    {id: 2, content: 'Second', value: 2}
-  ]);
-
-  // create a dataset with items
-  // note that months are zero-based in the JavaScript Date object, so month 3 is April
-  var items = new vis.DataSet([
-    {id: 0, group: 0, content: 'item 0', start: new Date(2014, 3, 17), end: new Date(2014, 3, 21)},
-    {id: 1, group: 0, content: 'item 1', start: new Date(2014, 3, 19), end: new Date(2014, 3, 20)},
-    {id: 2, group: 1, content: 'item 2', start: new Date(2014, 3, 16), end: new Date(2014, 3, 24)},
-    {id: 3, group: 1, content: 'item 3', start: new Date(2014, 3, 23), end: new Date(2014, 3, 24)},
-    {id: 4, group: 1, content: 'item 4', start: new Date(2014, 3, 22), end: new Date(2014, 3, 26)},
-    {id: 5, group: 2, content: 'item 5', start: new Date(2014, 3, 24), end: new Date(2014, 3, 27)}
-  ]);
-
-  // create visualization
-  var container = document.getElementById('visualization');
-  var options = {
-    // option groupOrder can be a property name or a sort function
-    // the sort function must compare two groups and return a value
-    //     > 0 when a > b
-    //     < 0 when a < b
-    //       0 when a == b
-    groupOrder: function (a, b) {
-      return a.value - b.value;
-    },
-    editable: true
-  };
-
+	or
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
   timeline.setGroups(groups);
   timeline.setItems(items);
 
 
-
-
-
   var groups = ([
     {id: 1,content: 'ancient greece',style: 'background-color: pink;'
       // Optional: a field 'className', 'style', 'order', [properties]},
-	{id: 2,content: 'ancient rome',style: 'background-color: red;'},
-	{id: 2,content: 'dark ages',style: 'background-color: #3f5c38;'}
+	{id: 2,content: 'ancient rome',style: 'background-color: red;'}
   ]);
 **/
 
 
-  // Configuration for the Timeline
   var options = {
     groupOrder: function (a, b) {
       return a.value - b.value;
-    },
-    editable: true
+    }
+
 	};
 
-  // Create a Timeline
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
   timeline.setGroups(groups);
