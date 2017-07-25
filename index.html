@@ -105,48 +105,20 @@
 
 
 /**
-TOOLTIPS
-  var items = new vis.DataSet([
-    {id: 1, content: 'Item 1', start: '2016-01-01', end: '2016-01-02', title: 'Normal text'},
-    {id: 2, content: 'Item 2', start: '2016-01-02', title: '<b>Bold</b>'},
-    {id: 3, content: 'Item 3', start: '2016-01-03', type: 'point', title: '<span style="color: red">Red</span> text'},
-    {id: 4, content: '<h1>HTML</h1> Item', start: '2016-01-03', end: '2016-01-04', title: '<table border="1"><tr><td>Cell 1</td><td>Cell 2</td></tr></table>'}
-  ]);
 
 
-  // Timeline object
-  var timelineTooltips = new vis.Timeline(document.getElementById('tooltips'),
-      items, options
-  );
+~~~~~~~~~~~~~~
+max zoom
 
-  // Follow options
-  var follow_options = {
-    tooltip: {
-      followMouse: true
-    }
+  // create visualization
+  var container = document.getElementById('visualization');
+  var options = {
+    height: '300px',
+    min: new Date(2012, 0, 1),                // lower limit of visible range
+    max: new Date(2013, 0, 1),                // upper limit of visible range
+    zoomMin: 1000 * 60 * 60 * 24,             // one day in milliseconds
+    zoomMax: 1000 * 60 * 60 * 24 * 31 * 3     // about three months in milliseconds
   };
-
-  var timelineFollow = new vis.Timeline(document.getElementById('tooltips-follow'),
-      items, follow_options);
-
-  // Cap options
-  var cap_options = {
-    tooltip: {
-      followMouse: true,
-      overflowMethod: 'cap'
-    }
-  }
-
-  var timelineCap = new vis.Timeline(document.getElementById('tooltips-cap'),
-      items, cap_options);
-
-  // Hide options
-  var hide_options = {
-    showTooltips: false
-  }
-
-  var timelineHide = new vis.Timeline(document.getElementById('tooltips-hide'),
-      items, hide_options);
 
 
 ~~~~~
@@ -154,8 +126,6 @@ TOOLTIPS
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
     {id: 'B', content: 'Period B', start: '2014-01-25', end: '2014-01-30', type: 'background', className: 'negative'},
     {id: 1, content: 'item 1<br>start', start: '2014-01-23'},
-    {id: 2, content: 'item 2', start: '2014-01-18'},
-    {id: 3, content: 'item 3', start: '2014-01-21'},
     {id: 4, content: 'item 4', start: '2014-01-19', end: '2014-01-24'},
     {id: 5, content: 'item 5', start: '2014-01-28', type:'point'}
   ]);
@@ -184,11 +154,15 @@ TOOLTIPS
 
 
   var options = {
-    groupOrder: function (a, b) {
-      return a.value - b.value;
-    }
 
-	};
+    groupOrder: function (a, b) {
+      return a.value - b.value;},
+
+    tooltip: {
+	  // showTooltips: false,
+      // followMouse: true,
+      overflowMethod: 'cap'}
+  };
 
   var timeline = new vis.Timeline(container);
   timeline.setOptions(options);
