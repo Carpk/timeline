@@ -27,25 +27,27 @@
 	div.vis-item-content {
 		color: black;
 	}
-	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.5);
+	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.6);
 	}
-	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.5);
+	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.6);
 	}
-	.vis-item.vis-background.hgreec { background-color: rgba(255,159,174, 0.5);
+	.vis-item.vis-background.hgreec { background-color: rgba(255,159,174, 0.6);
 	}
-	.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.5);
+	.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.6);
     }
-	.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.5);
+	.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.6);
     }
-	.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.5);
+	.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.6);
     }
-	.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.5);
+	.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.6);
     }
-	.vis-item.vis-background.meso  { background-color: rgba(255,237,194, 0.5); 
+	.vis-item.vis-background.meso  { background-color: rgba(255,237,194, 0.6); 
 	}
-	.vis-item.vis-background.usa   { background-color: rgba(0,0,255, 0.5); 
+	.vis-item.vis-background.usa   { background-color: rgba(0,0,255, 0.6); 
 	}
-	.vis-item.vis-background.col   { background-color: rgba(255,0,0, 0.5); 
+	.vis-item.vis-background.col   { background-color: rgba(255,0,0, 0.6); 
+	}
+	.vis-item.vis-background.min   { background-color: rgba(199,237,255, 0.6); 
 	}
   </style>
 </head>
@@ -64,6 +66,7 @@
   ]);
 
   var items = new vis.DataSet([
+	{id: 'MI', group: 2, content: 'Minoan',         start: '-002600-07-04', end: '-001100-07-04', type: 'background', className: 'min'},
     {id: 'AG', group: 2, content: 'ancient Greece', start: '-000800-09-01', end: '-000323-09-01', type: 'background', className: 'greece'},
     {id: 'HG', group: 2, content: '',               start: '-000323-09-01', end: '0146-06-22', type: 'background', className: 'greece'},
     {id: 'AR', group: 2, content: 'ancient Rome',   start: '-000510-06-01', end: '0476-06-15', type: 'background', className: 'rome'},
@@ -92,10 +95,11 @@
 	{id: 15, group: 4, content: 'Settlers arrive', start: '1607-09-01'},
 	{id: 16, group: 4, content: 'Columbus', start: '1492-09-01'},
 	{id: 17, group: 2, content: 'Napoleon', start: '1809-05-18'},
-	//{id: 18, group: 1, content: 'Nefertitt', start: '-001311-05-18'},
+	{id: 18, group: 2, content: 'Stonehedge', start: '-003100-05-18'},
 	{id: 19, group: 1, content: 'Cleopatra', start: '-000051-05-18'},
 	{id: 20, group: 1, content: 'King Tut', start: '-001328-05-18'},
-	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'}
+	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'},
+	{id: 22, group: 1, content: 'Narmer', start: '-003100-05-18'}
   ]);
 
 
