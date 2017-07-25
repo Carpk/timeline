@@ -90,7 +90,7 @@
 	{id: 10, group: 2, content: 'Parthenon', start: '-000439-06-01'},
 	{id: 11, group: 2, content: 'Rome founded', start: '-000753-09-01'},
 	{id: 12, group: 2, content: 'Crusades', start: '1200-06-01'},
-	{id: 13, group: 3,content: 'Aleppo', start: '-005000-06-01'},
+	{id: 13, group: 3, content: 'Aleppo', start: '-005000-06-01'},
 	{id: 14, group: 3, content: 'Cuneiform', start: '-003200-09-01'},
 	{id: 15, group: 4, content: 'Settlers arrive', start: '1607-09-01'},
 	{id: 16, group: 4, content: 'Columbus', start: '1492-09-01'},
@@ -99,11 +99,57 @@
 	{id: 19, group: 1, content: 'Cleopatra', start: '-000051-05-18'},
 	{id: 20, group: 1, content: 'King Tut', start: '-001328-05-18'},
 	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'},
-	{id: 22, group: 1, content: 'Narmer', start: '-003100-05-18'}
+	{id: 22, group: 1, content: 'Narmer', start: '-003100-05-18'},
+	{id: 23, group: 2, content: 'Jug', start: '-001537-05-18', title: '<img src="img/Minoan_Decorated_Jug.jpg" alt="">'}
   ]);
 
 
 /**
+TOOLTIPS
+  var items = new vis.DataSet([
+    {id: 1, content: 'Item 1', start: '2016-01-01', end: '2016-01-02', title: 'Normal text'},
+    {id: 2, content: 'Item 2', start: '2016-01-02', title: '<b>Bold</b>'},
+    {id: 3, content: 'Item 3', start: '2016-01-03', type: 'point', title: '<span style="color: red">Red</span> text'},
+    {id: 4, content: '<h1>HTML</h1> Item', start: '2016-01-03', end: '2016-01-04', title: '<table border="1"><tr><td>Cell 1</td><td>Cell 2</td></tr></table>'}
+  ]);
+
+
+  // Timeline object
+  var timelineTooltips = new vis.Timeline(document.getElementById('tooltips'),
+      items, options
+  );
+
+  // Follow options
+  var follow_options = {
+    tooltip: {
+      followMouse: true
+    }
+  };
+
+  var timelineFollow = new vis.Timeline(document.getElementById('tooltips-follow'),
+      items, follow_options);
+
+  // Cap options
+  var cap_options = {
+    tooltip: {
+      followMouse: true,
+      overflowMethod: 'cap'
+    }
+  }
+
+  var timelineCap = new vis.Timeline(document.getElementById('tooltips-cap'),
+      items, cap_options);
+
+  // Hide options
+  var hide_options = {
+    showTooltips: false
+  }
+
+  var timelineHide = new vis.Timeline(document.getElementById('tooltips-hide'),
+      items, hide_options);
+
+
+~~~~~
   var items = new vis.DataSet([
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
     {id: 'B', content: 'Period B', start: '2014-01-25', end: '2014-01-30', type: 'background', className: 'negative'},
