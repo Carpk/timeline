@@ -1,26 +1,4 @@
-    body, html {
-      font-family: sans-serif;
-      background-color: #FDFDFD;
-    }
-	.vis-tooltip {
-	  z-index: 99;
-    }
-	#visualization {
-		margin-top: 14%;
-	}
-    .vis-timeline {
-      // border: none;
-    }
-    .vis-time-axis .vis-grid.vis-vertical {
-      position: absolute;
-      border-left: 1px solid #313131;
-    }
-    .vis-item .vis-item-overflow {
-      overflow: visible;
-    }
-	div.vis-item-content {
-		color: black;
-	}
+
 	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.6);
 	}
 	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.6);
