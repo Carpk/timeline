@@ -5,56 +5,12 @@
 
   <script src="vis/dist/vis.js"></script>
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <link href="css/application.css" rel="stylesheet" type="text/css" />
+  <link href="css/period-colors.css" rel="stylesheet" type="text/css" />
 
-  <style type="text/css">
-    body, html {
-      font-family: sans-serif;
-      background-color: #FDFDFD;
-    }
-	.vis-tooltip {
-	  z-index: 99;
-    }
-	#visualization {
-		margin-top: 14vh;
-	}
-    .vis-timeline {
-      // border: none;
-    }
-    .vis-time-axis .vis-grid.vis-vertical {
-      position: absolute;
-      border-left: 1px solid #313131;
-    }
-    .vis-item .vis-item-overflow {
-      overflow: visible;
-    }
-	div.vis-item-content {
-		color: black;
-	}
-	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.6);
-	}
-	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.6);
-	}
-	.vis-item.vis-background.hgreec { background-color: rgba(255,159,174, 0.6);
-	}
-	.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.6);
-    }
-	.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.6);
-    }
-	.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.6);
-    }
-	.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.6);
-    }
-	.vis-item.vis-background.meso  { background-color: rgba(255,237,194, 0.6); 
-	}
-	.vis-item.vis-background.usa   { background-color: rgba(0,0,255, 0.6); 
-	}
-	.vis-item.vis-background.col   { background-color: rgba(255,0,0, 0.6); 
-	}
-	.vis-item.vis-background.min   { background-color: rgba(199,237,255, 0.6); 
-	}
-  </style>
 </head>
 <body>
+<div class="header">ProjectTimeline</div>
 <div id="visualization"></div>
 
 <script type="text/javascript">
@@ -75,62 +31,50 @@
     {id: 'HG', group: 2, content: '',               start: '-000323-09-01', end: '0146-06-22', type: 'background', className: 'greece'},
     {id: 'AR', group: 2, content: 'ancient Rome',   start: '-000510-06-01', end: '0476-06-15', type: 'background', className: 'rome'},
 	{id: 'PA', group: 1, content: '',               start: '-000030-06-01', end: '0641-07-04', type: 'background', className: 'rome'},
-    {id: 'DA', group: 2, content: 'Dark Ages',      start: '0476-06-01', end: '1400-06-01', type: 'background', className: 'dark'},
-    {id: 'RE', group: 2, content: 'Renaissance',    start: '1300-01-01', end: '1700-06-01', type: 'background', className: 'renais'},
+    {id: 'DA', group: 2, content: 'Dark Ages',      start: '0476-06-01',    end: '1400-06-01', type: 'background', className: 'dark'},
+    {id: 'RE', group: 2, content: 'Renaissance',    start: '1300-01-01',    end: '1700-06-01', type: 'background', className: 'renais'},
     {id: 'AE', group: 1, content: 'ancient Egypt',  start: '-003100-01-01', end: '-000332-06-01', type: 'background', className: 'aegypt'},
 	{id: 'HE', group: 1, content: '',               start: '-000332-06-01', end: '-000030-06-01', type: 'background', className: 'hegypt'},
     {id: 'ME', group: 3, content: 'Mesopotamia',    start: '-005700-06-01', end: '-000332-06-15', type: 'background', className: 'meso'},
-    {id: 'US', group: 4, content: 'America',        start: '1776-07-04', end: '2017-06-15', type: 'background', className: 'usa'},
-	{id: 'CO', group: 4, content: 'Colonies',       start: '1607-07-04', end: '1776-07-04', type: 'background', className: 'col'},
-    {id: 1, group: 2, content: 'WWI', start: '1914-07-28'},
-    {id: 2, group: 2, content: 'WWII', start: '1939-09-01'},
-    {id: 3, group: 2, content: 'Mona Lisa', start: '1505-06-01'},
+    {id: 'US', group: 4, content: 'America',        start: '1776-07-04',    end: '2017-06-15', type: 'background', className: 'usa'},
+	{id: 'CO', group: 4, content: 'Colonies',       start: '1607-07-04',    end: '1776-07-04', type: 'background', className: 'col'},
+    {id: 1, group: 2, content: 'WWI',        start: '1914-07-28'},
+    {id: 2, group: 2, content: 'WWII',       start: '1939-09-01'},
+    {id: 3, group: 2, content: 'Mona Lisa',  start: '1505-06-01'},
     {id: 4, group: 2, content: 'The Scream', start: '1893-06-01'},
-    {id: 5, group: 2, content: 'Plato', start: '-000380-04-25'},
+    {id: 5, group: 2, content: 'Plato',      start: '-000380-04-25'},
     {id: 6, group: 2, content: 'The Night Watch', start: '1642-06-01'},
-	{id: 7, group: 2, content: 'Rome Fell', start: '0476-09-01'},
+	{id: 7, group: 2, content: 'Rome Fell',  start: '0476-09-01'},
 	{id: 8, group: 4, content: 'U.S. independence', start: '1776-07-04'},
-	{id: 9, group: 2, content: 'Pantheon',
-	 start: '0123-09-01', title: '<img src="img/Pantheon.jpg" alt=""><br>Temple in Rome, Italy'},
+	{id: 9, group: 2, content: 'Pantheon',   start: '0123-09-01', 
+	 title: '<img src="img/Pantheon.jpg" alt=""><br>Temple in Rome, Italy'},
 	{id: 10, group: 2, content: 'Parthenon', 
 	 start: '-000439-06-01', title: '<img src="img/Parthenon.jpg" alt=""><br>Temple in Athens, Greece'},
 	{id: 11, group: 2, content: 'Rome founded', start: '-000753-09-01'},
-	{id: 12, group: 2, content: 'Crusades', start: '1200-06-01'},
-	{id: 13, group: 3, content: 'Aleppo',
-	 start: '-005000-06-01', title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria'},
+	{id: 12, group: 2, content: 'Crusades',  start: '1200-06-01'},
+	{id: 13, group: 3, content: 'Aleppo',    start: '-005000-06-01', 
+	 title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria'},
 	{id: 14, group: 3, content: 'Cuneiform',
 	 start: '-003200-09-01', title: '<img src="img/Cuneiform.jpg" alt=""><br>Early system of writing'},
 	{id: 15, group: 4, content: 'Settlers arrive', start: '1607-09-01'},
-	{id: 16, group: 4, content: 'Columbus', start: '1492-09-01'},
-	{id: 17, group: 2, content: 'Napoleon', start: '1809-05-18'},
+	{id: 16, group: 4, content: 'Columbus',   start: '1492-09-01'},
+	{id: 17, group: 2, content: 'Napoleon',   start: '1809-05-18'},
 	{id: 18, group: 2, content: 'Stonehedge', start: '-003100-05-18', 
 	 title: '<img src="img/Stonehenge.jpg" alt=""><br>Prehistoric monument in England'},
-	{id: 19, group: 1, content: 'Cleopatra', start: '-000051-05-18'},
-	{id: 20, group: 1, content: 'King Tut', start: '-001328-05-18'},
+	{id: 19, group: 1, content: 'Cleopatra',  start: '-000051-05-18'},
+	{id: 20, group: 1, content: 'King Tut',   start: '-001328-05-18'},
 	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'},
-	{id: 22, group: 1, content: 'Narmer', start: '-003100-05-18'},
+	{id: 22, group: 1, content: 'Narmer',     start: '-003100-05-18'},
 	{id: 23, group: 2, content: 'Decorative Jug', start: '-001537-05-18', 
 	 title: '<img src="img/Minoan_Decorated_Jug.jpg" alt=""><br>Minoan decorative jug'},
-	{id: 24, group: 2, content: 'Knossos', start: '-001900-05-18',
-	 title: '<img src="img/Knossos.jpg" alt=""><br>Europe\'s oldest city'}
+	{id: 24, group: 2, content: 'Knossos',    start: '-001900-05-18',
+	 title: '<img src="img/Knossos.jpg" alt=""><br>Europe\'s oldest city'},
+	{id: 25, group: 3, content: 'Ishtar Gate', start: '-000575-05-18',
+	 title: '<img src="img/Ishtar_Gate.jpg" alt=""><br>Built in Babylon, modern day Iraq'}
   ]);
 
 
 /**
-
-
-~~~~~~~~~~~~~~
-max zoom
-
-  // create visualization
-  var container = document.getElementById('visualization');
-  var options = {
-    zoomMin: 1000 * 60 * 60 * 24,             // one day in milliseconds
-    zoomMax: 1000 * 60 * 60 * 24 * 31 * 12     // about three months in milliseconds
-  };
-
-
-~~~~~
   var items = new vis.DataSet([
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
     {id: 'B', content: 'Period B', start: '2014-01-25', end: '2014-01-30', type: 'background', className: 'negative'},
@@ -146,14 +90,6 @@ max zoom
     editable: true
   };
 
-  var timeline = new vis.Timeline(container, items, options);
-	or
-  var timeline = new vis.Timeline(container);
-  timeline.setOptions(options);
-  timeline.setGroups(groups);
-  timeline.setItems(items);
-
-
   var groups = ([
     {id: 1,content: 'ancient greece',style: 'background-color: pink;'
       // Optional: a field 'className', 'style', 'order', [properties]},
@@ -165,7 +101,7 @@ max zoom
   var options = {
 	min: '-010000-01-01',
     max: '6000-09-01',
-    //zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6,
+    zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6,
 
     groupOrder: function (a, b) {
       return a.value - b.value;},
