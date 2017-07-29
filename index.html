@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Timeline | Basic demo</title>
+  <title>Project Timeline</title>
 
   <script src="vis/dist/vis.js"></script>
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
@@ -21,11 +21,11 @@
     { id: 1, content: 'Egypt', value: 2},
     { id: 2, content: 'Europe', value: 3},
     { id: 3, content: 'Middle East', value: 4},
-    { id: 4, content: 'America', value: 1}
+    { id: 4, content: 'Americas', value: 1}
   ]);
 
   var items = new vis.DataSet([
-	{id: 'KO', group: 2, content: 'Neolithic',      start: '-007000-07-04', end: '-003200-07-04', type: 'background', className: 'col'},
+	{id: 'KO', group: 2, content: 'Neolithic',      start: '-007000-07-04', end: '-002600-07-04', type: 'background', className: 'col'},
 	{id: 'MI', group: 2, content: 'Minoan',         start: '-002600-07-04', end: '-001100-07-04', type: 'background', className: 'min'},
     {id: 'AG', group: 2, content: 'ancient Greece', start: '-000800-09-01', end: '-000323-09-01', type: 'background', className: 'greece'},
     {id: 'HG', group: 2, content: '',               start: '-000323-09-01', end: '0146-06-22', type: 'background', className: 'greece'},
@@ -47,13 +47,15 @@
 	{id: 7, group: 2, content: 'Rome Fell',  start: '0476-09-01'},
 	{id: 8, group: 4, content: 'U.S. independence', start: '1776-07-04'},
 	{id: 9, group: 2, content: 'Pantheon',   start: '0123-09-01', 
-	 title: '<img src="img/Pantheon.jpg" alt=""><br>Temple in Rome, Italy'},
+	 title: '<img src="img/Pantheon.jpg" alt=""><br>Temple in Rome, Italy',
+	 description: 'Vis.js comes with a flexible DataSet, which can be'},
 	{id: 10, group: 2, content: 'Parthenon', 
 	 start: '-000439-06-01', title: '<img src="img/Parthenon.jpg" alt=""><br>Temple in Athens, Greece'},
 	{id: 11, group: 2, content: 'Rome founded', start: '-000753-09-01'},
-	{id: 12, group: 2, content: 'Crusades',  start: '1200-06-01'},
+	{id: 12, group: 2, content: 'Crusades',  start: '1200-06-01',
+	 title: '<img src="img/Crusades.jpg" alt="">'},
 	{id: 13, group: 3, content: 'Aleppo',    start: '-005000-06-01', 
-	 title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria'},
+	 title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria<br>Settlement in 5000BC<br>'},
 	{id: 14, group: 3, content: 'Cuneiform',
 	 start: '-003200-09-01', title: '<img src="img/Cuneiform.jpg" alt=""><br>Early system of writing'},
 	{id: 15, group: 4, content: 'Settlers arrive', start: '1607-09-01'},
@@ -61,8 +63,10 @@
 	{id: 17, group: 2, content: 'Napoleon',   start: '1809-05-18'},
 	{id: 18, group: 2, content: 'Stonehedge', start: '-003100-05-18', 
 	 title: '<img src="img/Stonehenge.jpg" alt=""><br>Prehistoric monument in England'},
-	{id: 19, group: 1, content: 'Cleopatra',  start: '-000051-05-18'},
-	{id: 20, group: 1, content: 'King Tut',   start: '-001328-05-18'},
+	{id: 19, group: 1, content: 'Cleopatra',  start: '-000030-08-12',
+	 title: '<img src="img/Cleopatra.jpg" alt=""><br>Cleopatra takes her life'},
+	{id: 20, group: 1, content: 'King Tut',   start: '-001328-05-18',
+	 title: '<img src="img/Tut.jpg" alt=""><br>Tutankhamun\'s death mask'},
 	{id: 21, group: 1, content: 'Ramesses II', start: '-001246-05-18'},
 	{id: 22, group: 1, content: 'Narmer',     start: '-003100-05-18'},
 	{id: 23, group: 2, content: 'Decorative Jug', start: '-001537-05-18', 
@@ -70,11 +74,21 @@
 	{id: 24, group: 2, content: 'Knossos',    start: '-001900-05-18',
 	 title: '<img src="img/Knossos.jpg" alt=""><br>Europe\'s oldest city'},
 	{id: 25, group: 3, content: 'Ishtar Gate', start: '-000575-05-18',
-	 title: '<img src="img/Ishtar_Gate.jpg" alt=""><br>Built in Babylon, modern day Iraq'}
+	 title: '<img src="img/Ishtar_Gate.jpg" alt=""><br>Built in Babylon, modern day Iraq'},
+	{id: 26, group: 2, content: 'Alexander the Great', start: '-000336-05-18',
+	 title: '<img src="img/Alexander_the_Great.jpg" alt=""><br>Alexander the Great'},
+	{id: 27, group: 2, content: 'Julius Caesar', start: '-000044-03-15',
+	 title: '<img src="img/La_morte_di_Cesare.jpg" alt=""><br>Death of Julius Caesar'},
+	{id: 28, group: 2, content: 'Venus Figurines', start: '-026500-03-15',
+	 title: '<img src="img/Venus_of_Willendorf.jpg" alt=""><br>Venus of Willendorf'},
+	{id: 29, group: 4, content: 'Cueva de las Manos', start: '-009000-03-15',
+	 title: '<img src="img/CuevaManos.jpg" alt=""><br>Cueva de las Manos, located in<br>Perito Moreno, Argentina.'}
   ]);
 
 
 /**
+Venus of Willendorf
+La_morte_di_Cesare.jpg
   var items = new vis.DataSet([
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
     {id: 'B', content: 'Period B', start: '2014-01-25', end: '2014-01-30', type: 'background', className: 'negative'},
@@ -99,7 +113,7 @@
 
 
   var options = {
-	min: '-010000-01-01',
+	min: '-030000-01-01',
     max: '6000-09-01',
     zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6,
 
@@ -117,6 +131,10 @@
   timeline.setOptions(options);
   timeline.setGroups(groups);
   timeline.setItems(items);
+
+  timeline.on('select', function (properties) {
+    console.log('item content: ' + items.get(parseInt(properties.items)).content );
+  });
 </script>
 </body>
 </html>
