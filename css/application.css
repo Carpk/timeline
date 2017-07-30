@@ -1,24 +1,24 @@
-    body, html {
-      font-family: sans-serif;
-      background-color: #FDFDFD;
-    }
-	.vis-tooltip {
-	  z-index: 99;
-    }
-	#visualization {
-		margin-top: 14vh;
-	}
-    .vis-timeline {
-      // border: none;
-    }
-    .vis-time-axis .vis-grid.vis-vertical {
-      position: absolute;
-      border-left: 1px solid #313131;
-    }
-    .vis-item .vis-item-overflow {
-      overflow: visible;
-    }
-	div.vis-item-content {
-		color: black;
-	}
+body, html {
+	font-family: sans-serif;
+	background-color: #FDFDFD;
+}
+.vis-tooltip {
+	//z-index: 99;
+}
+#visualization {
+	margin-top: 14vh;
+}
+.vis-timeline {
+	//border: none;
+}
+.vis-time-axis .vis-grid.vis-vertical {
+	position: absolute;
+	border-left: 1px solid #313131;
+}
+.vis-item .vis-item-overflow {
+	//overflow: visible;
+}
+div.vis-item-content {
+	color: black;
+}
 
