@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<div class="header">ProjectTimeline</div>
+<div class="header"><h1>ProjectTimeline</h1></div>
 <div id="visualization"></div>
 
 <script type="text/javascript">
@@ -97,7 +97,9 @@
 	{id: 35, group: 4, content: 'Folsom Point', start: '-008750-03-15',
 	 title: '<img src="img/Folsom_point.jpg" alt=""><br>Folsom Point'},
 	{id: 36, group: 4, content: 'Clovis Point', start: '-011500-03-15',
-	 title: '<img src="img/Clovis_Point.jpg" alt=""><br>Clovis projectile point'}
+	 title: '<img src="img/Clovis_Point.jpg" alt=""><br>Clovis projectile point'},
+	{id: 37, group: 4, content: 'Tikal', start: '0400-03-15',
+	 title: '<img src="img/Tikal.jpg" alt=""><br>ancient Myan citadel'}
   ]);
 
 
@@ -111,7 +113,7 @@ https://en.wikipedia.org/wiki/Magdalenian
 https://en.wikipedia.org/wiki/Mycenaean_Greece
 https://en.wikipedia.org/wiki/Military_of_Mycenaean_Greece
 https://en.wikipedia.org/wiki/Prehistoric_warfare#Paleolithic
-
+https://en.wikipedia.org/wiki/Lithic_stage
 
   var items = new vis.DataSet([
     {id: 'A', content: 'Period A', start: '2014-01-16', end: '2014-01-22', type: 'background'},
@@ -137,9 +139,10 @@ https://en.wikipedia.org/wiki/Prehistoric_warfare#Paleolithic
 
 
   var options = {
-	min: '-015000-01-01',
+	min: '-012000-01-01', //027000
     max: '5000-09-01',
-    zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6,
+    zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6, // century * x
+	zoomMax: 315360000000000, //default 315360000000000
 
     groupOrder: function (a, b) {
       return a.value - b.value;},
