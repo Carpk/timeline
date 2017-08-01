@@ -45,13 +45,14 @@
     {id: 4, group: 2, content: 'The Scream', start: '1893-06-01'},
     {id: 5, group: 2, content: 'Plato',      start: '-000380-04-25'},
     {id: 6, group: 2, content: 'The Night Watch', start: '1642-06-01'},
-	{id: 7, group: 2, content: 'Rome Fell',  start: '0476-09-01'},
+	{id: 7, group: 2, content: 'Rome Fell',  start: '0476-09-01',
+	 title: '<img src="img/RomulusAugustus.jpg" alt=""><br>Romulus Augustulus,<br>overthrown by Germania'},
 	{id: 8, group: 4, content: 'U.S. independence', start: '1776-07-04'},
 	{id: 9, group: 2, content: 'Pantheon',   start: '0123-09-01', 
 	 title: '<img src="img/Pantheon.jpg" alt=""><br>Temple in Rome, Italy',
 	 description: 'Vis.js comes with a flexible DataSet, which can be'},
-	{id: 10, group: 2, content: 'Parthenon', 
-	 start: '-000439-06-01', title: '<img src="img/Parthenon.jpg" alt=""><br>Temple in Athens, Greece'},
+	{id: 10, group: 2, content: 'Parthenon', start: '-000439-06-01',
+	 title: '<img src="img/Parthenon.jpg" alt=""><br>Temple in Athens, Greece'},
 	{id: 11, group: 2, content: 'Rome founded', start: '-000753-09-01'},
 	{id: 12, group: 2, content: 'Crusades',  start: '1200-06-01',
 	 title: '<img src="img/Crusades.jpg" alt="">'},
@@ -142,7 +143,7 @@ https://en.wikipedia.org/wiki/Lithic_stage
 	min: '-012000-01-01', //027000
     max: '5000-09-01',
     zoomMin: 1000 * 60 * 60 * 24 * 31 * 12 * 100 * 6, // century * x
-	zoomMax: 315360000000000, //default 315360000000000
+	zoomMax: 815360000000000, //default 315360000000000
 
     groupOrder: function (a, b) {
       return a.value - b.value;},
