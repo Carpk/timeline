@@ -1,6 +1,6 @@
 ## ProjectTimeline
 
-The website is to show major events over the history of time with bright colors and broken up into different regions. It's to be used as an education and informative tool.
+The website is to show major events over the history of time with bright colors and items broken up by different regions. It's to be used as an education and informative tool.
 
 #### Libraries used 
 

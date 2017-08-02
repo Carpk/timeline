@@ -1,25 +1,31 @@
 
-	.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.7);
-	}
-	.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.7);
-	}
-	.vis-item.vis-background.hgreec { background-color: rgba(255,159,174, 0.7);
-	}
-	.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.7);
-    }
-	.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.7);
-    }
-	.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.7);
-    }
-	.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.7);
-    }
-	.vis-item.vis-background.mesop  { background-color: rgba(255,237,194, 0.7); 
-	}
-	.vis-item.vis-background.usa   { background-color: rgba(0,0,255, 0.7); 
-	}
-	.vis-item.vis-background.col   { background-color: rgba(255,0,0, 0.7); 
-	}
-	.vis-item.vis-background.min   { background-color: rgba(199,237,255, 0.7); 
-	}
-	.vis-item.vis-background.mesoa   { background-color: rgba(132,88,33, 0.7); 
-	}
+.vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.8);
+}
+.vis-item.vis-background.neo-eu { background-color: rgba(160, 150, 138, 0.8);
+}
+.vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.8);
+}
+.vis-item.vis-background.gree-rome { background-color: rgba(138, 33, 33, 0.8);
+}
+.vis-item.vis-background.rome   { background-color: rgba(128,0,0, 0.8);
+}
+.vis-item.vis-background.renais { background-color: rgba(34,139,34, 0.8);
+}
+.vis-item.vis-background.aegypt { background-color: rgba(255, 242, 226, 0.8);
+}
+.vis-item.vis-background.hegypt { background-color: rgba(255,231,202, 0.8);
+}
+.vis-item.vis-background.mesop  { background-color: rgba(255,237,194, 0.8); 
+}
+.vis-item.vis-background.usa   { background-color: rgba(4,0,176, 0.8); 
+}
+.vis-item.vis-background.col   { background-color: rgba(212, 1, 1, 0.8); 
+}
+.vis-item.vis-background.mino   { background-color: rgba(199,237,255, 0.8); 
+}
+.vis-item.vis-background.mesoa   { background-color: rgba(132,88,33, 0.8); 
+}
+
+
+
+

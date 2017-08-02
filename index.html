@@ -7,16 +7,14 @@
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
   <link href="css/application.css" rel="stylesheet" type="text/css" />
   <link href="css/period-colors.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/timelinePeriods.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/europeData.js"></script>
 
 </head>
 <body>
 <div class="header"><h1>ProjectTimeline</h1></div>
 <div id="visualization"></div>
-
-
-<script type="text/javascript" src="js/timelinePeriods.js"></script>
-<script type="text/javascript" src="js/data.js"></script>
-<script type="text/javascript" src="js/europeData.js"></script>
 
 <script type="text/javascript">
 
@@ -29,6 +27,7 @@
     { id: 4, content: 'Americas', value: 1}
   ]);
 
+  // europeDataArrya needs IDs
   for (var i=0; i < dataArray.length; i++){
   	dataArray[i].id=i;
   }

@@ -20,7 +20,7 @@ var europeDataArray  = [
 	{content: 'Decorative Jug', start: '-001537-05-18', 
 	 title: '<img src="img/Minoan_Decorated_Jug.jpg" alt=""><br>Minoan decorative jug'},
 	{content: 'Knossos',    start: '-001900-05-18',
-	 title: '<img src="img/Knossos.jpg" alt=""><br>Europe\'s oldest city'},
+	 title: '<img src="img/Knossos.jpg" alt=""><br>Ceremonial and political centre of the Minoan civilization'},
 	{content: 'Alexander the Great', start: '-000336-05-18',
 	 title: '<img src="img/Alexander_the_Great.jpg" alt=""><br>Alexander the Great'},
 	{content: 'Julius Caesar', start: '-000044-03-15',
