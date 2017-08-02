@@ -13,8 +13,11 @@
 <div class="header"><h1>ProjectTimeline</h1></div>
 <div id="visualization"></div>
 
-<script type="text/javascript" src="js/data.js"></script>
+
 <script type="text/javascript" src="js/timelinePeriods.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/europeData.js"></script>
+
 <script type="text/javascript">
 
   var container = document.getElementById('visualization');
@@ -26,15 +29,14 @@
     { id: 4, content: 'Americas', value: 1}
   ]);
 
-for (var i=0; i < dataArray.length; i++){
-	dataArray[i].id=i;
-	console.log(dataArray[i])
-}
+  for (var i=0; i < dataArray.length; i++){
+  	dataArray[i].id=i;
+  }
 
-var fullDataArray = periodsDataArray.concat(dataArray);
+  var fullDataArray = periodsDataArray.concat(dataArray, europeDataArray);
+  console.log("Full Data Array Length: " + fullDataArray.length)
 
   var items = new vis.DataSet( fullDataArray );
-
 
   var options = {
 	min: '-012000-01-01', //fullSize: 027000
