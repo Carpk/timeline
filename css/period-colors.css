@@ -1,6 +1,8 @@
 
 .vis-item.vis-background.dark   { background-color: rgba(47,79,79, 0.8);
 }
+.vis-item.vis-background.mes-eu { background-color: rgba(138,160,153, 0.8);
+}
 .vis-item.vis-background.neo-eu { background-color: rgba(160, 150, 138, 0.8);
 }
 .vis-item.vis-background.greece { background-color: rgba(255,182,193, 0.8);

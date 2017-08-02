@@ -32,7 +32,9 @@ var europeDataArray  = [
 	{content: 'Chauvet Cave', start: '-026500-03-15',
 	 title: '<img src="img/Chauvet.jpg" alt=""><br>Replica of painting in Chauvet Cave'},
 	{content: 'Venus de Brassempouy', start: '-023000-03-15',
-	 title: '<img src="img/Venus_de_Brassempouy.jpg" alt=""><br>Venus de Brassempouy<br>discovered in 1892 France'}
+	 title: '<img src="img/Venus_de_Brassempouy.jpg" alt=""><br>Venus de Brassempouy<br>discovered in 1892 France'},
+	{content: 'Azilian points', start: '-008000-06-15',
+	 title: '<img src="img/Azilian_points.jpg" alt=""><br>Azilian points,<br>microliths from France and Spain'}
 ];
 
 

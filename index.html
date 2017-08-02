@@ -28,11 +28,12 @@
   ]);
 
   // europeDataArrya needs IDs
+  var dataArray = otherDataArray.concat(europeDataArray);
   for (var i=0; i < dataArray.length; i++){
   	dataArray[i].id=i;
   }
 
-  var fullDataArray = periodsDataArray.concat(dataArray, europeDataArray);
+  var fullDataArray = periodsDataArray.concat(dataArray);
   console.log("Full Data Array Length: " + fullDataArray.length)
 
   var items = new vis.DataSet( fullDataArray );
