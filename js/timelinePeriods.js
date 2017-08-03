@@ -1,6 +1,7 @@
 var periodsDataArray  = [
-  {id: 'ML', group: 2, content: 'Mesolithic',      start: '-009643-07-04', end: '-007000-07-04', type: 'background', className: 'mes-eu'},
+  {id: 'ML', group: 2, content: 'Mesolithic',     start: '-009643-07-04', end: '-007000-07-04', type: 'background', className: 'mes-eu'},
   {id: 'NE', group: 2, content: 'Neolithic',      start: '-007000-07-04', end: '-002600-07-04', type: 'background', className: 'neo-eu'},
+  {id: 'PE', group: 2, content: 'Paleolithic',    start: '-030000-07-04', end: '-009643-07-04', type: 'background', className: 'pal-eu'},
   {id: 'MI', group: 2, content: 'Minoan',         start: '-002600-07-04', end: '-001100-07-04', type: 'background', className: 'mino'},
   {id: 'AG', group: 2, content: 'ancient Greece', start: '-000800-09-01', end: '-000510-06-01', type: 'background', className: 'greece'},
   {id: 'HG', group: 2, content: 'ancient Rome',   start: '-000510-06-01', end: '0146-06-22', type: 'background', className: 'gree-rome'},
