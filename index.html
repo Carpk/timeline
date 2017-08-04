@@ -10,7 +10,7 @@
   <script type="text/javascript" src="js/timelinePeriods.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
   <script type="text/javascript" src="js/europeData.js"></script>
-
+  <script type="text/javascript" src="js/africaData.js"></script>
 </head>
 <body>
 <div class="header"><h1>ProjectTimeline</h1></div>
@@ -27,8 +27,7 @@
     { id: 4, content: 'Americas', value: 1}
   ]);
 
-  // europeDataArrya needs IDs
-  var dataArray = otherDataArray.concat(europeDataArray);
+  var dataArray = otherDataArray.concat(europeDataArray, africaDataArray);
   for (var i=0; i < dataArray.length; i++){
   	dataArray[i].id=i;
   }
