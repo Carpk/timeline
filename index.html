@@ -7,6 +7,8 @@
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
   <link href="css/application.css" rel="stylesheet" type="text/css" />
   <link href="css/period-colors.css" rel="stylesheet" type="text/css" />
+  <link href="css/modal.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/regionalData.js"></script>
   <script type="text/javascript" src="js/timelinePeriods.js"></script>
   <script type="text/javascript" src="js/data.js"></script>
   <script type="text/javascript" src="js/europeData.js"></script>
@@ -19,9 +21,11 @@
 <div id="itemModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h3 id="title"></h3>
-    <p id="description">Some text in the Modal..</p>
-    <div id="image"></div>
+    <h2 id="modal-title"></h2>
+    <div id="modal-image"></div>
+    <div>
+      <p id="modal-description"></p>
+    </div>
   </div>
 </div>
 
@@ -29,12 +33,7 @@
 
   var container = document.getElementById('visualization');
 
-  var groups = new vis.DataSet([
-    { id: 1, content: 'Africa', value: 2},
-    { id: 2, content: 'Europe', value: 3},
-    { id: 3, content: 'Middle East', value: 4},
-    { id: 4, content: 'Americas', value: 1}
-  ]);
+  var groups = new vis.DataSet( regionalDataArray );
 
   var dataArray = otherDataArray.concat(europeDataArray, africaDataArray);
   for (var i=0; i < dataArray.length; i++){
@@ -70,12 +69,18 @@
     var item = items.get(parseInt(properties.items));
     console.log('item content var: ' + item.content );
 
-    document.getElementById("title").textContent = item.content;
-    document.getElementById("description").textContent = item.description;
-    document.getElementById("image").innerHTML = item.title;
+    document.getElementById("modal-title").textContent = item.content;
+    document.getElementById("modal-description").textContent = item.description;
+    document.getElementById("modal-image").innerHTML = item.title;
 
-    var modal = document.getElementById("itemModal");//.innerHTML = item.content;
+    var modal = document.getElementById("itemModal");
 
+    //Close modal using "x"
+    document.getElementsByClassName("close")[0].onclick = function() {
+      modal.style.display = "none";
+    }
+
+    //Close modal by clicking in grey area
     modal.style.display = "block";
     window.onclick = function(event) {
       if (event.target == modal) {

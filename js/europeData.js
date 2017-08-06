@@ -16,7 +16,7 @@ var europeDataArray  = [
   {content: 'Crusades',  start: '1200-06-01',
     title: '<img src="img/Crusades.jpg" alt=""><br>Battle of the Field of Blood'},
   {content: 'Napoleon',   start: '1809-05-18'},
-  {content: 'Stonehedge', start: '-003100-05-18', 
+  {content: 'Stonehedge', start: '-003100-05-18',
 	title: '<img src="img/Stonehenge.jpg" alt=""><br>Prehistoric monument in England'},
   {content: 'Decorative Jug', start: '-001537-05-18', 
 	title: '<img src="img/Minoan_Decorated_Jug.jpg" alt=""><br>Minoan decorative jug'},
