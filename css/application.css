@@ -16,7 +16,19 @@ div.vis-item-content {
   color: black;
 }
 #modal-title {
-  margin-top: 0;
+  //margin-top: 0;
+}
+.modal-content {
+ padding: 10px 20px 20px 20px;
+}
+#modal-image {
+  float: left;
+}
+.modal-content::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 

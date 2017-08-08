@@ -5,12 +5,13 @@
 
   <script src="vis/dist/vis.js"></script>
   <link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
-  <link href="css/application.css" rel="stylesheet" type="text/css" />
   <link href="css/period-colors.css" rel="stylesheet" type="text/css" />
   <link href="css/modal.css" rel="stylesheet" type="text/css" />
+  <link href="css/application.css" rel="stylesheet" type="text/css" />
+
   <script type="text/javascript" src="js/regionalData.js"></script>
   <script type="text/javascript" src="js/timelinePeriods.js"></script>
-  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/generalData.js"></script>
   <script type="text/javascript" src="js/europeData.js"></script>
   <script type="text/javascript" src="js/africaData.js"></script>
 </head>
@@ -23,19 +24,16 @@
     <span class="close">&times;</span>
     <h2 id="modal-title"></h2>
     <div id="modal-image"></div>
-    <div>
-      <p id="modal-description"></p>
-    </div>
+    <div id="modal-description"></div>
   </div>
 </div>
 
 <script type="text/javascript">
-
   var container = document.getElementById('visualization');
 
   var groups = new vis.DataSet( regionalDataArray );
 
-  var dataArray = otherDataArray.concat(europeDataArray, africaDataArray);
+  var dataArray = generalDataArray.concat(europeDataArray, africaDataArray);
   for (var i=0; i < dataArray.length; i++){
   	dataArray[i].id=i;
   }
@@ -70,8 +68,8 @@
     console.log('item content var: ' + item.content );
 
     document.getElementById("modal-title").textContent = item.content;
-    document.getElementById("modal-description").textContent = item.description;
-    document.getElementById("modal-image").innerHTML = item.title;
+    document.getElementById("modal-description").innerHTML = item.description;
+    document.getElementById("modal-image").innerHTML = item.image;
 
     var modal = document.getElementById("itemModal");
 

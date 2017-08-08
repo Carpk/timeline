@@ -1,4 +1,4 @@
-var otherDataArray  = [
+var generalDataArray  = [
 	{group: 4, content: 'U.S. independence', start: '1776-07-04'},
 	{group: 3, content: 'Aleppo',    start: '-005000-06-01', 
 	 title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria,<br>a settlement in 5000BC<br>'},
