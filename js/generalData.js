@@ -1,7 +1,7 @@
 var generalDataArray  = [
 	{group: 4, content: 'U.S. independence', start: '1776-07-04'},
 	{group: 3, content: 'Aleppo',    start: '-005000-06-01', 
-	 title: '<img src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria,<br>a settlement in 5000BC<br>'},
+	 title: '<img height="275px" src="img/Aleppo.jpg" alt=""><br>Ancient city in Syria,<br>a settlement in 5000BC<br>'},
 	{group: 3, content: 'Cuneiform',
 	 start: '-003200-09-01', title: '<img src="img/Cuneiform.jpg" alt=""><br>Early system of writing'},
 	{group: 4, content: 'Settlers arrive', start: '1607-09-01'},
