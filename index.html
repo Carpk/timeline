@@ -9,6 +9,7 @@
   <link href="css/modal.css" rel="stylesheet" type="text/css" />
   <link href="css/application.css" rel="stylesheet" type="text/css" />
 
+  <script type="text/javascript" src="js/application.js"></script>
   <script type="text/javascript" src="js/regionalData.js"></script>
   <script type="text/javascript" src="js/timelinePeriods.js"></script>
   <script type="text/javascript" src="js/generalData.js"></script>
@@ -25,6 +26,7 @@
     <h2 id="modal-title"></h2>
     <div id="modal-image"></div>
     <div id="modal-description"></div>
+    <div id="modal-other-image"></div>
   </div>
 </div>
 
@@ -33,15 +35,16 @@
 
   var groups = new vis.DataSet( regionalDataArray );
 
-  var dataArray = generalDataArray.concat(europeDataArray, africaDataArray);
-  for (var i=0; i < dataArray.length; i++){
-  	dataArray[i].id=i;
-  }
+  assignGroups();
 
-  var fullDataArray = periodsDataArray.concat(dataArray);
-  console.log("Full Data Array Length: " + fullDataArray.length)
+  var dataArray = concatData();
 
-  var items = new vis.DataSet( fullDataArray );
+  createIds();
+
+  var completeArray = addTimePeriods();
+  console.log("Full Data Array Length: " + completeArray.length)
+
+  var items = new vis.DataSet( completeArray );
 
   var options = {
 	min: '-012000-01-01', //fullSize: 027000
@@ -70,6 +73,7 @@
     document.getElementById("modal-title").textContent = item.content;
     document.getElementById("modal-description").innerHTML = item.description;
     document.getElementById("modal-image").innerHTML = item.image;
+    document.getElementById("modal-other-image").innerHTML = item.imageOther;
 
     var modal = document.getElementById("itemModal");
 
