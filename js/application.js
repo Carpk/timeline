@@ -7,10 +7,14 @@ function assignGroups() {
   for (var i=0; i < europeDataArray.length; i++){
     europeDataArray[i].group=2;
   }
+
+  for (var i=0; i < americasDataArray.length; i++){
+    americasDataArray[i].group=4;
+  }
 }
 
 function concatData() {
-  return generalDataArray.concat(europeDataArray, africaDataArray);
+  return generalDataArray.concat(europeDataArray, africaDataArray, americasDataArray, middleEastDataArray);
 }
 
 function createIds() {
@@ -21,4 +25,11 @@ function createIds() {
 
 function addTimePeriods() {
   return periodsDataArray.concat(dataArray);
+}
+
+function assignElementsToDoc() {
+  document.getElementById("modal-title").textContent = item.content;
+  document.getElementById("modal-description").innerHTML = item.description;
+  document.getElementById("modal-image").innerHTML = item.image;
+  document.getElementById("modal-other-image").innerHTML = item.imageOther;
 }
