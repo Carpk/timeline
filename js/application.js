@@ -15,6 +15,10 @@ function assignGroups() {
   for (var i=0; i < americasDataArray.length; i++){
     americasDataArray[i].group=4;
   }
+
+  for (var i=0; i < generalDataArray.length; i++){
+    americasDataArray[i].group=5;
+  }
 }
 
 function concatData() {

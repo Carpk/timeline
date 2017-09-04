@@ -77,13 +77,13 @@ var europeDataArray  = [
   {content: 'Barnenez', start: '-004800-03-15',
    title: '<img height="275px" src="img/Barnenez.jpg" alt=""><br>Cairn of Barnenez, located in France',
    image: '<img height="450px" src="img/Barnenez.jpg" alt="">',
-   imageOther: '<img src="" alt="">',
-   description: ""},
+   imageOther: '<img height="450px" src="img/Barnenez_entrance.jpg" alt=""><br>One of the passages',
+   description: "<p>The Cairn of Barnenez is a Neolithic monument located near Plouezoc'h, on the Kernéléhen peninsula in northern Finistère, Brittany (France). It dates to the early Neolithic, about 4800 BC; it is considered one of the earliest megalithic monuments in Europe, as well as one of the oldest man-made structures in the world, along with the Tumulus of Bougon and Locmariaquer megaliths, also located in Great West France. It is also remarkable for the presence of megalithic art.</p>"},
   {content: 'Chauvet Cave', start: '-026500-03-15',
    title: '<img height="325px" src="img/Chauvet.jpg" alt=""><br>Replica of painting in Chauvet Cave',
    image: '<img height="450px" src="img/Chauvet.jpg" alt="">',
-   imageOther: '<img src="" alt="">',
-   description: ""},
+   imageOther: '<img src="img/Chauvet_Cave_France.jpg" alt="">',
+   description: "<p>The Chauvet-Pont-d'Arc Cave in the Ardèche department of southern France is a cave that contains some of the best preserved figurative cave paintings in the world,[3] as well as other evidence of Upper Paleolithic life.[4] It is located near the commune of Vallon-Pont-d'Arc on a limestone cliff above the former bed of the Ardèche River, in the Gorges de l'Ardèche.</p>"},
   {content: 'Venus de Brassempouy', start: '-023000-03-15',
    title: '<img src="img/Venus_de_Brassempouy.jpg" alt=""><br>Venus de Brassempouy<br>discovered in 1892 France',
    image: '<img src="img/Venus_de_Brassempouy.jpg" alt="">',
@@ -93,7 +93,7 @@ var europeDataArray  = [
    title: '<img height="300px" src="img/Azilian_points.jpg" alt=""><br>Azilian points(1.8x0.5x0.3in),<br>microliths from France and Spain',
    image: '<img height="450px" src="img/Azilian_points.jpg" alt="">',
    imageOther: '<img src="" alt="">',
-   description: ""}
+   description: "<p>The Azilian is a name given by archaeologists to an industry of the Epipaleolithic in northern Spain and southern France.</p><p>It probably dates to the period of the Allerød Oscillation around 12,000 years ago (uncalibrated) and followed the Magdalenian culture. Archaeologists think the Azilian represents the tail end of the Magdalenian as the warming climate brought about changes in human behaviour in the area. The effects of melting ice sheets would have diminished the food supply and probably impoverished the previously well-fed Magdalenian manufacturers. As a result, Azilian tools and art were cruder and less expansive than their Ice Age predecessors - or simply different.</p><p>Diagnostic artifacts from the culture include Azilian points (microliths with rounded retouched backs), crude flat bone harpoons and pebbles with abstract decoration. The latter were first found in the River Arize at the type-site for the culture, Le Mas-d'Azil in the French Pyrenees. 145 are known from the Swiss site of Birsmatten-Eremitage. Compared with the late Magdalenian, the number of microliths increases.</p>"}
 ];
 
 
