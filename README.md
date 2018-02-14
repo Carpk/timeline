@@ -1,5 +1,7 @@
 ## ProjectTimeline
 
+![image](https://github.com/Carpk/timeline/blob/danny/readme.gif)
+
 The website is to show major events over the history of time with bright colors and items broken up by different regions. It's to be used as an education and informative tool.
 
 #### Resources 
